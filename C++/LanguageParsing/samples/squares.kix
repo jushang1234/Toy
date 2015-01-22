@@ -1,0 +1,8 @@
+square :: ( n::Integer ) -> Integer
+  = n * n ;
+
+main :: ( args::[String] ) -> Integer
+  = let numbers :: [Integer] = [1 .. 10] ;
+        squaredNumbers :: [Integer] = map ( square, numbers ) ;
+    in  print ( squaredNumbers )
+    end ;

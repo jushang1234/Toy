@@ -1,0 +1,16 @@
+square :: ( n::Integer ) -> Integer
+  = n * n ;
+
+even :: ( n::Integer ) -> Boolean
+ = n % 2 == 0 ;
+
+main :: ( args::[String] ) -> Integer
+  = let numbers :: [Integer] = [1 .. 10] ;
+        squaredNumbers :: [Integer] = map ( square, numbers ) ;
+        evenSquaredNumbers :: [Integer] 
+         = filter ( even, squaredNumbers ) ;
+    in  let p1 :: Integer = print ( squaredNumbers ) ;
+            p2 :: Integer = print ( evenSquaredNumbers ) ;
+        in  p1 + p2 
+        end 
+    end ;

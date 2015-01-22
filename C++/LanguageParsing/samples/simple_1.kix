@@ -1,0 +1,2 @@
+main :: ( args::[String] ) -> Integer
+  = 1 + 2 ;

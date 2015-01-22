@@ -1,0 +1,20 @@
+Zach Buchan
+Shawn Ju
+
+Division of labor:
+
+Okay, one of us was an idiot. Zach spent several (many) hours working on scanner. This is because he decided to build a file-walking function from scratch instead of using the framework given in WordCount. Right now we fail 49 out of 50 tests, which we suspect is due to a problem with the EOF node that we put on the end, although it could also be from some sort of problem with assigning the terminals to our nodes. In any case, we only realized now (it's 3:45 on the due date) that we should have appropriated WordCount's skeleton to do all of our processing. Sigh. 
+
+Shawn wrote all of the tests, as well as being our go-to guy when we needed help from the TAs. He's fearless like that, whereas Zach doesn't want to bother anybody. 
+
+With just over an hour to go until it's due, we're going to frantically try rewriting everything using the WordCount backbone. Wish us luck!
+
+
+some update by Shawn:
+
+I redo some of the code, using workcount pattern and some nasty for-loops
+
+more update by Shawn:
+
+The nightmare is over.
+Done with the scanner.

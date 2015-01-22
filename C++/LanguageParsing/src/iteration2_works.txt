@@ -1,0 +1,5 @@
+Zach Buchan
+Shawn Ju
+
+Division of labor:
+Actually there is not much to do in iteration3. We finished the make file and passed the i2_assessment_tests during the lab.

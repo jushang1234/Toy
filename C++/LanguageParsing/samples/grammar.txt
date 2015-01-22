@@ -1,0 +1,67 @@
+Program ::= DeclList
+
+DeclList ::= Decl
+DeclList ::= Decl DeclList
+
+Decl ::= variableName '::' TypeExpr '=' Expr ';'
+
+TypeExpr ::= 'Integer'
+TypeExpr ::= 'Float'
+TypeExpr ::= 'String'
+TypeExpr ::= 'Boolean'
+TypeExpr ::= '[' TypeExpr ']'
+TypeExpr ::= '(' TypeBindingList ')' '->' TypeExpr
+TypeExpr ::= '(' TypeExprList ')'
+
+TypeExprList ::= TypeExpr
+TypeExprList ::= TypeExpr ',' TypeExprList
+
+TypeBindingList ::= TypeBinding
+TypeBindingList ::= TypeBinding ',' TypeBindingList
+
+TypeBinding ::= variableName '::' TypeExpr
+
+OptionalExprList ::= <<empty>>
+OptionalExprList ::= ExprList
+
+ExprList ::= Expr
+ExprList ::= Expr ',' ExprList
+
+Expr ::= variableName
+Expr ::= intConst
+Expr ::= floatConst
+Expr ::= stringConst
+Expr ::= trueKwd
+Expr ::= falseKwd
+Expr ::= '(' Expr ')'
+Expr ::= '(' Expr ',' ExprList ')'
+Expr ::= '[' ExprList ']'
+Expr ::= variableName '(' Expr ')'
+Expr ::= Expr '+' Expr
+Expr ::= Expr '*' Expr
+Expr ::= Expr '-' Expr
+Expr ::= Expr '/' Expr
+Expr ::= Expr '%' Expr
+Expr ::= Expr '==' Expr
+Expr ::= Expr '<' Expr
+Expr ::= Expr '>' Expr
+Expr ::= Expr '>=' Expr
+Expr ::= Expr '<=' Expr
+Expr ::= Expr '!=' Expr
+Expr ::= Expr ':' Expr
+Expr ::= Expr '++' Expr
+Expr ::= Expr '..' Expr
+Expr ::= 'let' DeclList 'in' Expr 'end'
+Expr ::= 'if' Expr 'then' Expr 'else' Expr
+Expr ::= 'print' '(' Expr ')'
+Expr ::= 'write' '(' Expr, Expr ')'
+Expr ::= 'read' '<' TypeExpr '>' '(' Expr ')'
+Expr ::= 'head' '(' Expr ')'
+Expr ::= 'tail' '(' Expr ')'
+Expr ::= 'null' '(' Expr ')'
+Expr ::= 'map' '(' Expr ',' Expr ')'
+Expr ::= 'filter' '(' Expr ',' Expr ')'
+Expr ::= 'fold' '(' Expr ',' Expr ',' Expr ')'
+Expr ::= 'zip' '(' Expr ',' Expr ')'
+Expr ::= '\' TypeBindingsList 'arrow' Expr
+Expr ::= tupleOp '(' Expr ')'

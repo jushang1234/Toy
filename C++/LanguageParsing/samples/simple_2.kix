@@ -1,0 +1,6 @@
+main :: ( args::[String] ) -> Integer
+  = let x :: Integer = 4 ;
+        y :: Integer = 5 ;
+     in
+        x * y
+     end ;

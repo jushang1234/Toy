@@ -1,0 +1,29 @@
+
+1 2 3 4
+
+"Hello"  "I am a string literal"
+
+/* A block comment */
+
+/* Below is a list literal, composed of several individual tokens */
+[1.2, 3.4, 5.6]
+
+/* below are some single-character punctuation and operator symbols */
+; , ( [ ) ] = + * - / % > < : \
+
+/* below are some multi-character punctuation and operator symbols */
+:: -> == <= >= != ++ ..
+
+/* Some sample variable names */
+a b c  length  point88   depthInFeet   height_in_meters
+
+/* Some keywords - these are not variable names */
+main let in end if then else
+print read write
+Integer Float Boolean String
+true false
+head tail null
+map filter fold
+
+/* Operators for accessing tuple elements */
+#1 #2 #3 #4 #99

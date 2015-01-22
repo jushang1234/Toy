@@ -1,0 +1,17 @@
+vecSum :: ( vs::[Integer] ) -> Integer
+  = fold ( \ a::Integer, b::Integer -> a + b, 0, vs ) ;
+
+vecMul :: ( xs::[Integer], ys::[Integer] ) -> Integer
+  = vecSum ( map ( \ xy :: (Integer,Integer) -> #1(xy) * #2(xy),
+             zip (xs, ys) ) ) ;
+
+matMul :: ( m::[[Integer]], v::[Integer] ) -> [Integer]
+  = map ( \r :: [Integer] -> vecMul ( r, v ),  m) ;
+
+main :: ( args::[String] ) -> Integer
+ = let m :: [[Integer]] = [ <[Integer]>
+                            [ <Integer> 1, 2], [ <Integer> 3, 4] ] ;
+       v :: [Integer] = [ <Integer> 5, 6 ] ;
+   in print ( matMul( m, v ) )
+   end ;
+
