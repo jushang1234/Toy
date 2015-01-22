@@ -1,0 +1,55 @@
+/* CSci 4061 F2014 Assignment 1
+ * Login: jiang481
+ * Date: 10/01/2014
+ * Name: Jialun Jiang, Yaozhang Xu, Shang Ju
+ * ID:   4467970,      4944346,     4455103
+ */
+
+PURPOSE:
+
+make4061 is a simple version of GNU Make that makes project building more convenient, efficient and controllable. The purpose of the make utility is to  determine automatically which pieces of a large program need to be recompiled, and issue the commands to recompile them. 
+
+SYNOPSIS: 
+
+make4061 [-f makefile] [options] ... [target]
+
+OPTIONS:
+	
+	No options
+		make 4061 will use "Makefile" as default makefile name and build the first target in the makefile. If target is found, build the target. Only single target is allowed.
+
+	-f <filename>
+		Use filename as a makefile
+	-m <logname>
+		Store the log from make4061 in <logname>. If <logname> does not exist it will be created.
+	-n
+		Only display the commands to be executed but won't actually execute them. Without -n switch commands will be both displayed and executed.
+	-B
+		Force recompile every target.
+
+COMPILE:
+
+	gcc -o make4061 main.c util.c -std=c99
+	OR
+	make
+
+EXAMPLE USAGE:
+
+	./make4061
+	Build the first target in file "Makefile".
+
+	./make4061 ex_target
+	Build ex_target in file "Makefile".
+
+	./make4061 -f ex_makefile ex_target
+	Build ex_target in file "ex_makefile".
+
+	./make4061 -f ex_makefile -n
+	Display the commands for building the first target in "ex_makefile" but don't actually execute them.
+
+	./make4061 -f ex_makefile -n -m ex_log.log -B ex_target
+	Store the commands for building ex_target in file "ex_makefile" in "ex_log.log" but don't actually execute them.
+
+SEE ALSO:
+
+	The CSci 4061 Fall 2014 Assignment 1 Description

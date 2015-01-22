@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "mm.h"
+
+int main() {
+	struct timeval time_s, time_e;
+	

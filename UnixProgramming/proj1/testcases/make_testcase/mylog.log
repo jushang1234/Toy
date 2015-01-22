@@ -1,0 +1,5 @@
+gcc -c parse.c
+gcc -c cal.c
+ar rcs util.a parse.o cal.o
+gcc -c main.c
+gcc -o make4061 main.o util.a

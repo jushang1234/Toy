@@ -1,0 +1,7 @@
+This is a simple gtk + webkit example for you to explore.
+
+Compile and run this code. See section 10.1 for details.
+  make
+  ./gtk-example
+
+Can you make the code change to show a different website in the browser, any website of your choice. You do not have to understand all code to do that.

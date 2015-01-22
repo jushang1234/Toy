@@ -1,0 +1,36 @@
+/* CSci 4061 F2014 Assignment 4
+ * Section 3
+ * Date: 12/1/2014
+ * Name: Jialun Jiang, Yaozhang Xu, Shang Ju
+ * ID:   4467970,      4944346,     4455103
+ */
+ 
+PURPOSE:
+	web_server_http is a multithreaded web server that handles a portion of HTTP protocol.
+	
+SYNOPSIS:
+	web_server_http port path num_dispatchers num_workers queue_length [cache_entries]
+	
+ARGUMENTS:
+	port
+		Port number the server is listening to.
+	path
+		The path to your web root location.
+	num_dispatchers
+		Number of dispatcher threads to use.
+	num_workers
+		See above. Replace "dispatcher" with "worker".
+	queue_length
+		Maximum length of the request queue.
+	[cache_entries]
+		Number of entries available in the cache.
+
+COMPILE:
+	make
+
+EXAMPLE USAGE:
+	./web_server_http 5001 /home 40 61 100 50
+	Open the server on port 5001 with root directory set to /home and 40 dispatchers, 61 workers, queue length 100 and 50-entry cache.
+	
+SEE ALSO:
+	The CSci 4061 Fall 2014 Assignment 4 Description
